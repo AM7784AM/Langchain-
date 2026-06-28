@@ -22,6 +22,7 @@ def main():
     )
 
     # Use Ollama locally
+    llm = ChatOllama(model="gemma", temperature=0)
     llm = ChatOllama(model="llama3", temperature=0)
 
     chain = summary_prompt_template | llm
